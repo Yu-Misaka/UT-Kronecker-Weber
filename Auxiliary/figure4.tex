@@ -1,0 +1,37 @@
+\documentclass{standalone}
+\usepackage{tikz, float, ulem, amsthm, tikz-cd}
+\usepackage{quiver}
+
+% Fonts
+% \usepackage[utf8]{inputenc} % Required for international characters
+\usepackage[T1]{fontenc} % Font encoding for international characters
+% \usepackage{newpxtext} % Alternative use of the PX fonts
+\usepackage{newpxmath} % Alternative use of the PX fonts (Math)
+% \usepackage{microtype} % Slightly tweak font spacing for aesthetics
+\usepackage{fvextra} % Compatibility with csquotes (?)
+\usepackage{csquotes} % Compatibility with babel (?)
+\linespread{1.2} % Increase line spacing slightly
+
+% Ensure compilation with XeLaTeX or LuaLaTeX for fontspec
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Pagella}[LetterSpace=0.7]
+
+% Define a command to switch to Lato font
+\newcommand{\latofont}{\fontspec{Lato}}
+\usepackage{quiver}
+
+\begin{document}
+
+\begin{tikzcd}[column sep=tiny]
+	{\rm{\textbf{INPUT}}} \\
+	{\rm{has \ tame \ ramification?}} & {\rm{\textbf{OUTPUT}}} \\
+	{\rm{take \ a \ tamely \ ramified \ prime}} \\
+	{\rm{a \ field \ in \ which \ it \ is \ unramified}}
+	\arrow[from=1-1, to=2-1]
+	\arrow["{\rm{No}}", from=2-1, to=2-2]
+	\arrow["{\rm{Yes}}", from=2-1, to=3-1]
+	\arrow["{\rm{Theorem \ 3.1}}", from=3-1, to=4-1]
+	\arrow[shift left=5, from=4-1, to=2-1]
+\end{tikzcd}
+
+\end{document}

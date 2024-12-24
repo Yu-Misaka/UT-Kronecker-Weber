@@ -1,0 +1,20 @@
+\documentclass{standalone}
+\usepackage{quiver}
+
+\begin{document}
+
+\begin{tikzcd}
+	& L &&&& {L(number \ field)} \\
+	B &&&& {\mathcal{O}_L} \\
+	& K &&&& {\mathbb{Q}} \\
+	\\
+	& {A(Dedekind)} &&&& {\mathbb{Z}}
+	\arrow["{{{finite \ degree,\ separable}}}"{description}, from=3-2, to=1-2]
+	\arrow["{{{finite \ degree,\ separable}}}"{description}, from=3-6, to=1-6]
+	\arrow["{{{integral \ closure}}}"{description}, curve={height=-18pt}, from=5-2, to=2-1]
+	\arrow["{{{field \ of \ fractions}}}"', from=5-2, to=3-2]
+	\arrow["{{{integral \ closure}}}"{description}, curve={height=-18pt}, from=5-6, to=2-5]
+	\arrow["{{{field \ of \ fractions}}}"', from=5-6, to=3-6]
+\end{tikzcd}
+
+\end{document}

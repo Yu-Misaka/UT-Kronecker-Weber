@@ -1,0 +1,13 @@
+\chapter{Introduction}
+\label{cp:introduction}
+\newtheorem{thm}{Theorem}[chapter]
+\begin{thm}[Kronecker-Weber]\label{thm:kwthm}
+~\begin{center}
+    Every abelian extension of $\mathbb{Q}$ is contained in a cyclotomic field.
+\end{center}
+\end{thm}
+\noindent
+The Kronecker-Weber theorem stands as a landmark result in the field of algebraic number theory, representing a foundational moment in the development of class field theory. This theorem not only provides a deep understanding of the structure of number fields but also connects the seemingly abstract concept of abelian extensions to the concrete and well-understood world of roots of unity.\\\\
+David Hilbert provided the first rigorous proof of the theorem, which was built upon the earlier insights of Kronecker and Weber. Hilbert’s approach involved the usage of higher ramification groups, a tool that allows deeper analysis of how primes behave in field extensions, particularly in understanding the distinction between tame and wild ramification. This framework not only completed the proof of the Kronecker-Weber theorem but also laid the groundwork for the future development of class field theory, which would later be expanded by mathematicians such as Emil Artin and Helmut Hasse.\\\\
+In recent years, there has been increasing interest in the formalization of mathematical theorems using computer assisted theorem prover like Lean. The Kronecker-Weber theorem, with its rich structure and historical importance, has become a subject of focus in this area. The formalization process involves encoding the proof of the theorem into a computer-verifiable format, ensuring not only the correctness of the proof but also making it accessible for future computational applications.\\\\
+One of the main difficulty in formalization is to find relevant existing works, as they always lack of natural language annotation and appear very different from our expectation. Thus, throughout this paper, I will presents basic proof steps along side with existing relevant lemmas in mathlib, the theorem library for Lean, if any. And I shall also explain their connections. Finally I will build a basic algorithm or framework to prove Kronecker-Weber in a formalization fashion.

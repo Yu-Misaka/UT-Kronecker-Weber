@@ -1,0 +1,47 @@
+\chapter{Preliminary Ring Theory}
+\label{cp:ring}
+Here we quickly go through some basic setup in preliminary ring theory. Let $A$ be an integral domain, $L$ a field containing $A$.
+\newtheorem{defi}{Definition}[chapter]
+\begin{defi}
+~\begin{itemize}
+    \item[] $\alpha \in L$ is \textbf{integral over} $A$: $\alpha$ is a root of a \textbf{monic} polynomial with coefficients in $A$.
+    \begin{listing}[!htpb]
+    \begin{minted}{lean}
+def IsIntegral (R : Type u_1) {A : Type u_3} [CommRing R] [Ring A] [Algebra R A] (x : A) : Prop := (algebraMap R A).IsIntegralElem x
+    \end{minted}
+    \end{listing}
+    \item[] \textbf{Integral closure} of $A$ in $L$: ring of elements of $L$ integral over $A$.
+    \begin{listing}[!htpb]
+    \begin{minted}{lean}
+def integralClosure (R : Type u_1) (A : Type u_2) [CommRing R] [CommRing A] [Algebra R A] : Subalgebra R A
+    \end{minted}
+    \end{listing}
+    \item[] \textbf{Ring of integers} $\mathcal{O}_L$ in $L$: integral closure of $\mathbb{Z}$ in algebraic number field $L$.
+    \begin{listing}[!htpb]
+    \begin{minted}[escapeinside=||,mathescape=true]{lean}
+def NumberField.RingOfIntegers (K : Type u_1) [Field K] : Type _ := integralClosure |$\mathbb{Z}$| K
+    \end{minted}
+    \end{listing}
+    \item[] $D$ is a \textbf{Dedekind domain}: $D$ is an integral domain satisfying: \\noetherian, integrally closed and every nonzero prime ideal is maximal
+    \begin{listing}[!htpb]
+    \begin{minted}[escapeinside=||,mathescape=true]{lean}
+class IsDedekindDomain (A : Type u_2) [CommRing A] extends IsDomain, IsDedekindRing
+    \end{minted}
+    \end{listing}
+\end{itemize}
+\end{defi}
+
+\begin{thm}[Main result concerning Dedekind domain]
+~\begin{itemize}
+    \item[] $A$ a Dedekind domain. Every proper nonzero ideal $\mathfrak{a}$ of $A$ can be written in the form
+    $\mathfrak{a}=\mathfrak{p}_1^{r_1} \dots \mathfrak{p}_n^{r_n}$
+    with the $\mathfrak{p}_i^{r_i}$ distinct prime ideals and the $r_i > 0$; the $\mathfrak{p}_i$ and the $r_i$ are uniquely determined.
+    \begin{listing}[!htpb]
+    \begin{minted}{lean}
+instance Ideal.uniqueFactorizationMonoid {A : Type u_2} [CommRing A] [IsDedekindDomain A] : UniqueFactorizationMonoid (Ideal A)
+    \end{minted}
+    \end{listing}
+\end{itemize}
+
+
+\end{thm}

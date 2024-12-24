@@ -1,0 +1,30 @@
+% Packages & Document Configurations
+\documentclass[en]{K-W-Thesis}
+
+% Document Variables (Title, Author, etc.)
+\input{Variables/Variables}
+
+\begin{document}
+
+% Front Matter
+\include{Matter/01-FPage}
+
+% Roman numeration
+\pagenumbering{roman}
+
+% Abstract
+\include{Chapters/00-Abstract}
+
+\tableofcontents
+
+% Arabic numeration
+\pagenumbering{arabic}
+
+% Chapters
+\include{Chapters/01-Introduction}
+% \include{Chapters/021-BasicRing}
+\include{Chapters/031-Ramification}
+\include{Chapters/032-Kronecker-Weber}
+\include{Chapters/033-Discussions}
+
+\end{document}

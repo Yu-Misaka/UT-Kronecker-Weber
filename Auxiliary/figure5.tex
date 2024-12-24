@@ -1,0 +1,20 @@
+\documentclass{standalone}
+\usepackage{quiver}
+
+\begin{document}
+
+\begin{tikzcd}[sep=tiny]
+	E && {G=Gal(E/F)} \\
+	\\
+	&& {H=\mathcal{G}(K)} \\
+	{K=\mathcal{F}(H)} \\
+	\\
+	F && 1
+	\arrow[color={rgb,255:red,92;green,92;blue,214}, from=1-3, to=3-3]
+	\arrow[color={rgb,255:red,214;green,92;blue,92}, from=3-3, to=6-3]
+	\arrow[color={rgb,255:red,214;green,92;blue,92}, from=4-1, to=1-1]
+	\arrow[tail reversed, from=4-1, to=3-3]
+	\arrow[color={rgb,255:red,92;green,92;blue,214}, from=6-1, to=4-1]
+\end{tikzcd}
+
+\end{document}

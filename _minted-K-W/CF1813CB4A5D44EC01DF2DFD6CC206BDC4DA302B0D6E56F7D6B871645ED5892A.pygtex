@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kd}{def}\PYG{+w}{ }\PYG{n}{LocalRing.ResidueField}\PYG{+w}{ }\PYG{o}{(}\PYG{n}{R}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{k+kt}{Type}\PYG{+w}{ }\PYG{n}{u\PYGZus{}1}\PYG{o}{)}\PYG{+w}{ }\PYG{o}{[}\PYG{n}{CommRing}\PYG{+w}{ }\PYG{n}{R}\PYG{o}{]}\PYG{+w}{ }\PYG{o}{[}\PYG{n}{LocalRing}\PYG{+w}{ }\PYG{n}{R}\PYG{o}{]}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{k+kt}{Type}\PYG{+w}{ }\PYG{n}{u\PYGZus{}1}\PYG{+w}{ }\PYG{o}{:=}
+\PYG{+w}{    }\PYG{n}{R}\PYG{+w}{ }\PYG{n+nb+bp}{/}\PYG{+w}{ }\PYG{n}{LocalRing.maximalIdeal}\PYG{+w}{ }\PYG{n}{R}
+\end{Verbatim}
