@@ -26,3 +26,5 @@
 *.stt
 *.xdy
 *.tdo
+*.pygstyle
+*.pygtex
